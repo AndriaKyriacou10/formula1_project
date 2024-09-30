@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title%}
+    Speed Icons - Search driver
+{% endblock %}
+
+{% block main %}
+<section class="main-home search container my-5 p-0 mx-auto">
+    <div class="row w-100 mx-0 pb-4 justify-content-center drivers-title">
+        <h2 class="py-3  text-center ">Drivers - {{season}} Season</h2>
+    </div>
+    <div class="row w-100 mx-0 pb-4 justify-content-center">
+        <p class="pt-2 ps-sm-5 ps-3 search-p">Click on a driver to view their data</p>
+        {% for driver in drivers %}
+            <div class="col drivers-col">
+                <div class="card drivers-card mx-auto my-4" style="width: 22rem;" driver_id = {{driver.id}}>
+                    <div class="card-body">
+                        <div class="circuit-flag d-flex justify-content-between align-items-center">
+                            <h5 class="driver-name mb-0">{{driver.name}} <span class="driver-number ms-2">{{driver.number}}</span>  </h5>
+                            <img src="{{driver.flag}}" alt="" class="flag-driver">
+                        </div>
+                       
+                    </div>
+
+                    <img src="{{driver.driver_img}}" class="card-img-bottom  d-block mx-auto" alt="...">    
+                    
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+<script src="{{ url_for('static', filename='drivers.js') }}"  type="text/javascript"></script>
+{% endblock %}

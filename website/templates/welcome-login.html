@@ -1,0 +1,71 @@
+{% extends "base.html"%}
+{% block title %}
+    Speed Icons
+{% endblock %}
+
+{% block main %}
+    <section class="main-home container p-0  mx-sm-auto my-sm-5 m-sm-0">
+        <section class="sign-in">
+            <div class="container h-100">
+                <div class="row d-flex h-100">
+                    <div class="col p-5 h-100">
+                        <h1 class="display-4 fw-medium text-capitalize m-auto text-start">Discover the world of <span class="emphasis">formula 1</span></h1>
+                        <form action="/login" method="post" class="form">
+                            <div class="mb-8 input-form">
+                                <i class="fa-solid fa-user input-icon"></i>
+                                <input type="email" class="c-input form-control my-4" id="InputEmail1" name="email" placeholder="Email Address" aria-describedby="emailHelp" autocomplete="off">
+                            </div>
+
+                            <div class="mb-5 input-form">
+                                <i class="fa-solid fa-key input-icon"></i>
+                                <input type="password" class="c-input form-control my-4" id="InputPassword1" name="password" placeholder="Password" autocomplete="off">
+                            </div>
+                            <button type="submit" class="w-100 btn btn-dark px-4 py-2 fs-3 ">Login</button>
+                            <p class="mt-4 h-100 p-login"> Don't have an account ? <br> <a href="/register" class="link-underline link-opacity-100-hover link-underline-opacity-0 regsiter-link"> Register Here </a></p>
+                            <p class="h-100 p-login"> Forgot Password ? <br> <a href="/forgot" class="link-underline link-opacity-100-hover link-underline-opacity-0 regsiter-link"> Change Here </a></p>
+                        </form>
+
+                    </div>
+                    <div class="col-3 photo-1 d-none d-lg-flex p-0">
+                        <img src="{{url_for('static',filename='login/test.jpeg')}}" alt="" class="d-block w-100 h-100 object-fit-cover">
+                        
+                    </div>
+                    <div class="col-3 photos d-none d-lg-flex p-0">
+                        <img src="{{url_for('static',filename='login/test-2.jpeg')}}" alt="" class="d-block w-100 h-100 object-fit-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="overview pt-4 p-lg-5">
+            <h2 class="c-how text-center">How it works</h2>
+            <!-- Flexbox all about parent element -->
+            <div class="container-lg w-100 h-100 d-flex">
+                
+                <div class="row w-100 text-center mt-5 justify-content-evenly pb-5"> 
+                    <div class="col-lg learn ">
+                        <i class="c-icon fa-solid fa-flag-checkered"></i>
+                        <h3 class="mt-3 how-header text-capitalize">Discover Formula 1</h3>
+                        <p class="pt-1 how-text"> explore stats and results of your favourite drivers and team </p>
+                        
+                    </div>
+                    <div class="col-lg learn ">
+                        <i class="c-icon fa-regular fa-newspaper"></i>
+                        <h3 class="mt-3 how-header">Stay Updated with F1 News</h3>
+                        <p class="pt-1 how-text text-capitalize">Get the latest F1 news and never miss out on new information</p>
+                        
+                    </div>
+                    <div class="col-lg learn ">
+                        <i class="c-icon fa-solid fa-trophy"></i>
+                        <h3 class="mt-3 how-header">Compare Drivers</h3>
+                        <p class="pt-1 how-text">Compare any two drivers across F1 seasons. Analyze wins, podiums, and more</p>
+                        
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </section>
+    
+
+{% endblock %}

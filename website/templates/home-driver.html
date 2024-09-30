@@ -1,0 +1,172 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Speed Icons - Home
+{% endblock %}
+
+{% block main %}
+    <section class="main-home homepage container p-0 my-5 mx-auto">
+        <div class="row w-100 m-0 h-100">
+            {% if exists==true %}
+                <div class="col-md-6 px-0 h-100"> 
+                    <div class="row w-100 m-0">
+                        <img src="{{img_src}}" alt="" class="img-driver img-fluid px-0" > 
+                    </div>
+                    <div class="driver-info w-100">
+                        <div class="row w-100 h-100 m-0 ">
+                            <div class="text-center col-4 col-sm-4 d-flex align-items-center justify-content-center px-0 h-100">
+                                <h2 class=" name-header pt-sm-2 ps-sm-2 ms-lg-3">{{driver_name}}</h2>
+                            </div>
+                            <div class=" col-4 col-sm-4 d-flex px-0 align-items-center  justify-content-center h-100"> 
+                                <p class="  number mx-auto">{{number}}</p>
+                            </div>
+                            <div class=" col-4 col-sm-4 d-flex px-0 align-items-center justify-content-center h-100">
+                                <img src="{{flag_src}}" alt="Country" class=" d-block flag-img  px-2 ">
+                            </div>
+                        </div>                 
+                    </div>  
+                    <div class="driver-data row w-100 m-0">
+                        <div class=" col-lg-6 d-flex py-4">
+                            <div class="card mx-auto" style="width: 22rem;">
+                                <img src="{{team_url}}" class="card-img-top px-2 pt-2" alt="team">
+                                <div class="card-body">
+                                    <h5 class="card-title fs-3 text-center">Team</h5>
+                                    <p class="card-text fs-4 text-center">{{team}}</p>
+                                    <a href="/team/{{constructor_id}}" class="btn btn-team  w-75 d-block mx-auto">Go to Team</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 d-flex py-4">
+                            <div class="card mx-auto" style="width: 22rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title fs-4">Date of Birth</h5>
+                                    <p class="card-text  dob ">{{dob}}</p>
+                                    <h5 class="card-title fs-4">Best Race Finish</h5>
+                                    <p class="card-text  dob ">{{best_race_position}} (x{{total_best}})</p>
+                                    <h5 class="card-title fs-4">Podiums</h5>
+                                    <p class="card-text  dob ">{{total_podiums}}</p>
+                                    <h5 class="card-title fs-4">Driver Championships</h5>
+                                    <p class="card-text  dob ">{{champ_count}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" results col-md-6 px-0  flex-column  mt-sm-4 ps-2 pe-2">
+                    <div class="row w-100 m-0 custom-padding mt-md-4">
+                        <h3 class="text-center fw-bolder d-block my-auto results-header"> Race Results </h3>
+                    </div>
+                    <table class="table table-light table-bordered table-hover mt-5 mb-0">
+                        <thead class="fs-5">
+                            <tr>
+                                <th>Round</th>
+                                <th>Grand Prix</th>
+                                <th>Result</th>
+                                <th>Points</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-group-divider fs-5">
+                            {% for result in results %}
+                                <tr class="table-row">
+                                    <td>{{result.round}}</td>
+                                    <td>{{result.race_name}}</td>
+                                    <td>{{result.position}}</td>
+                                    <td>{{result.points}}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    
+                </div>
+            {% else %}
+                <div class="col">
+                    <div class="driver-info w-100">
+                        <div class="row w-100 h-100 m-0 ">
+                            <div class="text-center col-4 col-sm-4 d-flex align-items-center justify-content-center px-0 h-100">
+                                <h2 class="custom-padding name-header pt-2 ps-sm-2 ms-lg-3 mb-0">{{driver_name}}</h2>
+                                <!-- <h2 class="custom-padding name-header pt-2 ps-sm-2 ms-lg-3">(Reserve)</h2> -->
+                            </div>
+                            <div class=" col-4 col-sm-4 d-flex px-0 align-items-center  h-100"> 
+                                <p class="custom-padding  number mx-auto">{{number}}</p>
+                            </div>
+                            <div class=" col-4 col-sm-4 d-flex   px-0 align-items-center h-100">
+                                <img src="{{flag_src}}" alt="Country" class=" d-block flag-img object-fit-cover  custom-padding mx-auto px-2">
+                            </div>
+                        </div>   
+                                   
+                    </div>  
+                </div>
+                <div class="row w-100 mx-0">
+                    <div class=" col-lg-6 d-flex py-4">
+                        <div class="card mx-auto" style="width: 22rem;">
+                            <img src="{{team_url}}" class="card-img-top px-2 pt-2" alt="team">
+                            <div class="card-body">
+                                <h5 class="card-title fs-3 text-center">Team</h5>
+                                <p class="card-text fs-4 text-center">{{team}}</p>
+                                <a href="/team/{{constructor_id}}" class="btn btn-team  w-75 d-block mx-auto">Go to Team</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 d-flex py-4">
+                        <div class="card mx-auto" style="width: 22rem;">
+                            <div class="card-body">
+                                <h5 class="card-title fs-4">Date of Birth</h5>
+                                <p class="card-text  dob ">{{dob}}</p>
+                                <h5 class="card-title fs-4">Best Race Finish</h5>
+                                <p class="card-text  dob ">{{best_race_position}} (x{{total_best}})</p>
+                                <h5 class="card-title fs-4">Podiums</h5>
+                                <p class="card-text  dob ">{{total_podiums}}</p>
+                                <h5 class="card-title fs-4">Driver Championships</h5>
+                                <p class="card-text  dob ">{{champ_count}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row w-100 mx-0">
+                    <div class=" results col px-0  flex-column  mt-4 ps-2 pe-2">
+                        <div class="row w-100 m-0 custom-padding mt-md-4">
+                            <h3 class="text-center fw-bolder d-block my-auto results-header"> Race Results </h3>
+                        </div>
+                        <table class="table table-light table-bordered table-hover mt-5 mb-0">
+                            <thead class="fs-5">
+                                <tr>
+                                    <th>Round</th>
+                                    <th>Grand Prix</th>
+                                    <th>Result</th>
+                                    <th>Points</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-group-divider fs-5">
+                                {% for result in results %}
+                                    <tr class="table-row">
+                                        <td>{{result.round}}</td>
+                                        <td>{{result.race_name}}</td>
+                                        <td>{{result.position}}</td>
+                                        <td>{{result.points}}</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                        
+                    </div>
+                </div>
+                
+    
+            {% endif %}
+        </div>
+        
+    </section>
+    <script>
+        let row = document.querySelectorAll('.table-row');
+        row.forEach(data => {
+            let result = data.children[2].textContent;
+
+            if (parseInt(result) <= 3){
+                data.style.fontWeight = '700';
+                //data.style.setProperty('--bs-table-bg', '#d7dbe0');
+            }
+            
+        })
+    </script>
+{% endblock %}

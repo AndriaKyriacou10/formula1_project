@@ -1,0 +1,1811 @@
+/* ------------------------------ BASE STYLES ------------------------------ */
+html {
+    --accent-color : #41a9ef;
+}
+
+@keyframes move {
+    0% {
+        opacity: 0;
+        transform: translateZ(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+.success {
+    background-color: #c7d0e4 !important;
+    font-size: 20px !important;
+    border: 0 !important;
+}
+.danger {
+    background-color: #f8d7da !important;
+    font-size: 20px !important;
+    border: 0 !important;
+}
+/* ------------------------------ BACKGROUND ------------------------------ */
+body {
+    background-color: #fff;
+}
+.bg {
+    height: 100vh;
+    width: 100%;
+    object-fit: fill;
+    position: absolute;
+    z-index: -1;
+}
+/* ------------------------------ MAIN - HOME ------------------------------ */
+.main-home {
+    border-radius: 5px;
+    box-shadow: 5px 5px 80px rgba(0, 0, 0, 0.5);
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+/* ------------------------------ SIGN - IN ------------------------------ */
+.sign-in {
+    background-color: #d6d7e4;
+}
+
+.emphasis {
+    font-style: italic;
+    color:#242271;
+}
+.form {
+    position: relative;
+}
+.c-input {
+    height: 60px;
+    font-size: 20px !important;
+    padding-left: 50px !important;
+    /* position: relative; */
+}
+
+.input-icon {
+    font-size: 17px;
+    color: #adb4c2;
+    position: absolute;
+
+}
+.input-form:nth-of-type(1) .input-icon {
+    top: 22px;
+    left: 22px;
+}
+.input-form:nth-of-type(2) .input-icon {
+    top: 105px;
+    left: 22px;
+}
+
+.photos {
+   
+}
+.nav-link.dropdown-toggle::after {
+    margin-left: 0.1rem; /* Reduce the spacing */
+    vertical-align: middle; /* Align it vertically to the middle */
+    margin-bottom: 0px; 
+    border-top: 0.35em solid;  /* Keep or modify the size of the caret */
+    border-right: 0.3em solid transparent;
+    border-left: 0.3em solid transparent;
+}
+
+/* ------------------------------ OVERVIEW ------------------------------ */
+.overview {
+    background-color: rgb(240, 242, 248);
+}
+.c-icon {
+    height: 75px;
+    width: 75px;
+    background-color: #000;
+    border-radius: 5000px;
+    color: #fff;
+    line-height: 65px;
+    margin-bottom: 10px;
+    /* margin: auto; */
+    padding: 25px 0;
+    font-size:24px; 
+    padding-right: 1px;
+}
+
+.c-how{
+    font-family: 'Lato',sans-serif;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-size: 32px;
+    color: #292c33;
+    position: relative;
+}
+
+.c-how::after{
+    content: '';
+    height: 3px;
+    width: 52px;
+    display: block;
+    position: absolute;
+    background-color: var(--accent-color);
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 10px;
+}
+
+.learn {
+    max-width : 226px !important;
+}
+.learn:nth-of-type(1) .c-icon{
+    background-color: #f5365c3f;
+    color: #f5365c;
+}
+
+.learn:nth-of-type(2) .c-icon{
+    background-color: #cf85e0e6;;
+    color: #620776d2;
+}
+
+.learn:nth-of-type(3) .c-icon{
+    background-color: #ffd90065;;
+    color: #b99e01;
+}
+
+.how-header {
+    font-family: 'Lato',sans-serif;
+    font-size: 23px;
+    font-weight: 600;
+    color: #3d4048;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+}
+.how-text {
+    font-size: 20px;
+    color: #74777d;
+    /* margin: auto auto; */
+    text-transform: capitalize;
+}
+
+/* ------------------------------ REGISTER ------------------------------ */
+.register {
+    background-color: #d6d7e4;
+    height:980px;
+    overflow-y: hidden;
+}
+
+.form-register {
+    width: 60% !important;
+    height: 58px !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+}
+
+.register-header {
+    font-family: 'Lato',sans-serif;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-size: 32px;
+    color: #292c33;
+    position: relative;
+}
+.register-header::after {
+    content: '';
+    height: 2px;
+    width: 100px;
+    display: block;
+    position: absolute;
+    background-color: var(--accent-color);
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 10px;
+}
+
+.btn-register{
+    width: 40%;
+    height: 50px; 
+    background-color: #000 !important;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    border-radius: 0.375rem;
+    border: 0;
+    color: #fff;
+    transition: all 0.3s;
+    margin-bottom: 55px;
+}
+.btn-register-focus {
+    margin-bottom: 0px
+}
+
+.btn-register:hover {
+    background-color: #4f525d !important;
+}
+.p-login {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.25rem;
+}
+/* ------------------------------ HOME ------------------------------ */
+
+.homepage {
+    /* background-color: #fff; */
+    width: 95%;
+    overflow-y: visible;
+    background-color: #e2e7ec;
+    height: fit-content;
+    animation: move 1.5s;
+}
+.driver-info {
+    background-color: #e2e7ec;
+    height: 120px;
+}
+
+.name-header{
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 45px; 
+    font-weight: 400; 
+    max-width: 275px;
+}
+.number {
+    font-size: 45px;
+    font-weight: 400 !important;
+    font-family: 'Roboto Slab', sans-serif;
+    color:#000; 
+}
+
+.results {
+    padding-bottom: 16px ;
+}
+.results-header {
+    font-family: 'Lato', sans-serif;
+    font-size: 40px;
+    position: relative;
+}
+
+.results-header::after {
+    content: '';
+    height: 3px;
+    width: 80px;
+    display: block;
+    position: absolute;
+    background-color: var(--accent-color);
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 10px;
+}
+
+.flag-img {
+    width: 110px;
+}
+.driver-data,
+.driver-data-reserve {
+    background-color: #e2e7ec;
+}
+.driver-data-text {
+    font-family: 'Roboto Slab', sans-serif; 
+    font-size: 30px
+}
+.dob {
+    font-family: 'Roboto Slab', sans-serif; 
+    font-size: 18px
+}
+
+.btn-team {
+    background-color: var(--accent-color) !important;
+    color: #ffffff !important;
+    transition: all 0.2s !important;
+    font-size: 20px !important;
+}
+.btn-team:hover {
+    background-color: #676b79 !important;
+}
+
+/* ------------------------------ TEAM ------------------------------ */
+.team {
+    /* background-color: #fff; */
+    width: 95%;
+    overflow-y: visible;
+    background-color: #fff;
+    height: auto;
+    /* animation: move 1.5s; */
+}
+.team-header-container {
+    /* height : 150px; */
+    background-color: #e2e7ec;
+}
+.team-header {
+    font-family: 'Roboto Slab',sans-serif;
+    font-size: 55px;
+    font-weight: normal;
+}
+.img-team {
+    height: fit-content;
+}
+
+.driver-card{
+    font-family: 'Roboto Slab', sans-serif;
+}
+
+.number-card {
+    font-size: 35px;
+}
+.btn-driver {
+    background-color: var(--accent-color) !important;
+    color: #ffffff !important;
+    transition: all 0.2s !important;
+    font-size: 16px !important;
+}
+.btn-driver:hover {
+    background-color: #676b79 !important;
+}
+.team-img-card {
+    /* border-radius: 4px; */
+    /* width: 100%;
+    height: 200px; */
+    /* object-fit: cover; */
+    overflow:hidden;
+}
+.team-img-text{
+    font-family: 'Roboto Slab', sans-serif; 
+    font-size: 20px
+}
+.card-img-driver{
+    /* width: 100%; */
+    /* height: 250px; */
+    /* object-fit: contain; */
+}
+.add-perspective{
+    perspective: 1000px;
+}
+.c-card {
+    width: 22rem;
+    transition: transform 0.3s ease-in-out;
+    transform: translateZ(0);
+    will-change: transform;
+}
+.c-card:hover {
+    cursor: pointer;
+    transform: translateZ(40px);
+}
+.card-col {
+    height: 200px;
+}
+.drivers{
+    width: auto;
+}
+.driver-team-row {
+    background-color: #e2e7ec;
+}
+.driver-team-header {
+    font-size: 45px;
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+    height: 80px;
+    letter-spacing: 2.5px;
+    position: relative;
+}
+.driver-team-header::after {
+    content: '';
+    width: 100px;
+    height: 3px;
+    display: block;
+    position: absolute;
+    background-color: var(--accent-color);
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 8px;
+}
+
+/* ------------------------------ DRIVER STANDINGS ------------------------------ */
+.d-standings,
+.con-standings {
+    width: 95%;
+    overflow-y: visible;
+    background-color: #fff;
+    height: fit-content;
+}
+.d-standings-container,
+.con-standings-container {
+    background-color: #e2e7ec;
+    height: 100px;
+}
+.d-standings-header,
+.con-standings-header {
+    font-family: 'Roboto Slab',sans-serif;
+    font-size: 55px;
+    font-weight: normal;
+    padding: 10px 0;
+    position: relative;
+}
+
+.d-standings-header::after,
+.con-standings-header::after {
+    content: '';
+    height: 2px;
+    width: 150px;
+    display: block;
+    position: absolute;
+    background-color: var(--accent-color);
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 5px;
+}
+
+.round-text {
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+/* ------------------------------ SCHEDULE ------------------------------ */
+.schedule {
+    width: 100%;
+    overflow-y: visible;
+    background-color: rgb(209, 214, 225);
+    height: fit-content;
+}
+.schedule-col,
+.drivers-col,
+.constructor-col {
+    perspective: 800px;
+}
+.schedule-card,
+.drivers-card,
+.constructors-card {
+    transition: transform 0.3s ease-in-out;
+    transform: translateZ(0);
+    will-change: transform;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);    
+}
+.schedule-card:hover,
+.drivers-card:hover,
+.constructors-card:hover {
+    cursor: pointer;
+    transform: translateZ(20px);
+}
+
+.race-name {
+    /* font-size: 25px; */
+}
+.track-img {
+    padding: 10px 40px;
+}
+.flag {
+    float: right;
+    width: 50px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+.round-race {
+    font-family: 'Lato', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+}
+.round-number {
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.date-text {
+    font-size: 20px;
+}
+
+.countdown {
+    background-color: #ffffff;
+    height: 100%;
+}
+.next-race {
+    font-family: 'Lato', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+}
+.next-text {
+    font-family: 'Lato', sans-serif;
+    font-size: 40px;
+    font-weight: 300;
+}
+.next-flag {
+    float: right;
+    width: 70px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+.countdown-item {
+    /* border-right: solid 1px #656c7b; */
+    background-color: #8989b8;
+    border-radius: 4px;
+    box-shadow: 1px 0.8px 10px rgba(0, 0, 0, 0.8);
+    width: 110px !important;
+    height: 100px ;
+    overflow: hidden;
+}
+
+.countdown-number {
+    color: #fff;
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 40px;
+    background-color: inherit;
+    font-weight: 400;
+}
+.countdown-text {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #000;
+    background-color: #fff;
+}
+
+/* ------------------------------ SEARCH ------------------------------ */
+.search {
+    width: 95% !important;
+    background-color: rgb(209, 214, 225);
+    height: fit-content;
+}
+.search-p {
+    font-size: 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+.driver-name {
+    font-family: 'Lato', sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.driver-number {
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 35px;
+    font-weight: 600;
+}
+.flag-driver,
+.flag-constructor {
+    float: right;
+    width: 40px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+.drivers-title,
+.constructors-title{
+    height: 100px;
+    background-color: #fff;
+}
+.drivers-title h2,
+.constructors-title h2{
+    font-family: 'Lato', sans-serif;
+    font-size: 45px;
+    font-weight: 300;
+}
+.constructor-name {
+    font-family: 'Lato', sans-serif;
+    font-size: 35px;
+    font-weight: 400;
+}
+
+/* ------------------------------ NEWS ------------------------------ */
+.news {
+    width: 95% !important;
+    background-color: rgb(209, 214, 225);
+    height: fit-content;
+}
+
+.article-title {
+   font-family: 'Lato', sans-serif;
+   font-size: 30px;
+   font-weight: 400; 
+}
+
+.img-article{
+    width: 25% !important;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); 
+}
+
+.divider{
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+}
+
+/* ------------------------------ COMPARE ------------------------------ */
+.compare-overflow{
+    overflow: visible;
+}
+.compare {
+    width: 95% !important;
+    height: 600px;    
+}
+
+.img-compare {
+    filter: brightness(0.55);
+}
+.compare-label {
+    font-size: 70px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    color:#fff;
+}
+.compare-label span
+{
+    font-size: 90px;
+    font-family: 'Roboto Slab', sans-serif;
+    font-weight: 400;
+    color:#fff;
+}
+.compare-input {
+    width: 100%;
+    height: 50px;
+    margin-top: 100px;
+    padding-left: 30px;
+    font-family: 'Lato',sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+.div-versus {
+    background-color: rgb(176 179 190) !important;
+}
+
+.versus {
+    font-size: 150px;
+    font-family: 'Roboto Slab', sans-serif;
+    font-weight: 400;
+    color:#000;
+    margin-top: 150px;
+}
+
+.btn-compare{
+    background-color: rgb(17, 23, 31)!important;
+    width:50% !important;
+    height: 80px;
+    transition: all 4s;
+    box-shadow: 0px -2px 4px rgba(255, 255, 255, 0.8);
+}
+.btn-compare:hover {
+    background-color: rgb(31, 42, 56) !important; 
+}
+.btn-compare span {
+    font-family: 'Roboto Slab',sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    color:#fff;
+}
+.row-button {
+    margin-top: 34% !important;
+}
+.row-button-toggle {
+    margin-top: 38% !important;
+}
+.driver-1 {
+    background-image: url('f1-car.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken;
+    
+}
+.driver-2 {
+    background-image: url('f1-driver-2.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken;
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px;
+    top: 83%;
+    transform: translateY(-50%);
+}
+
+.dropdown-compare {
+    background-color: #fff;
+    position: relative;
+    display: inline-block;
+    margin-top: 4px;
+}
+/* ------------------------------ COMPARE  RESULTS ------------------------------ */
+.compare-results {
+    width: 100%;
+    overflow-y: visible;
+    background-color: rgb(209, 214, 225);
+    height: fit-content;
+}
+.compare-flag {
+    float: right;
+    border-radius: 4px;
+    /* box-shadow: 0px 0px 4px 1px rgba(251, 236, 236, 0.786); */
+    width: 75%;
+}
+.driver-img-compare {
+    border-radius: 1000px;
+    width: 100%;
+}
+.driver-name-compare {
+    font-family: 'Lato', sans-serif;
+    font-size: 35px;
+    font-weight: 500;
+    color: #fff;
+}
+.driver-no-number {
+    font-family: 'Lato', sans-serif;
+    font-size: 40px !important;
+    font-weight: 500;
+    color: #fff;
+}
+.driver-number-compare {
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 45px;
+    font-weight: 600;
+}
+.row-bg {
+    background-color: #504d6e;
+    height: 104px;
+}
+
+.driver-p{
+    font-size: 35px;
+    font-family: 'Roboto Slab',sans-serif;
+    font-weight: 400;
+    color: #000;
+    margin-bottom: 0;
+}
+.compare-data {
+    background-color: rgb(215, 216, 221);
+}
+.row-data,
+.best-champ-data {
+    position: relative;
+}
+.data-headers,
+.best-champ-headers  {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 800;
+    font-family: 'Lato',sans-serif;
+    letter-spacing: 1.5px;
+    color:#000;
+}
+
+.data-headers-p {
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.data-headers-debut {
+    max-width: 100px;
+    margin: 0 auto;
+}
+
+.data-headers-pole {
+    margin: 0 auto;
+}
+
+.best-champ {
+    background-color: #fff;
+    color: #000;
+}
+.best-champ h2 {
+    font-family: 'Lato',sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+}
+.years-max-w {
+    max-width: 450px;
+    font-size: 30px !important;
+}
+.years-max-w-2{
+    margin-left: 105px;
+}
+
+.best-p {
+    font-size: 35px;
+    font-family: 'Roboto Slab',sans-serif;
+    font-weight: 400;
+    color: #000;
+    word-spacing: 30px;
+    margin-bottom: 0;
+    /* width: 75%; */
+}
+.best-p-1 {
+    margin-right: 22%;
+}
+.best-p-2 {
+    margin-left: 22%;
+}
+.best-p-width {
+    max-width: 200px;
+    /* margin: 0 auto; */
+}
+
+.teams {
+    background-color: #252c31;
+}
+.teams h2 {
+    color: #fff;
+    font-family: 'Lato',sans-serif;
+    font-size: 40px;
+    font-weight: 500; 
+}
+.add-border {
+    border-radius: 10px;  
+    overflow: hidden; 
+    border: 2px solid #4d5154;
+} 
+.team-p {
+    width: 300px;
+    font-size: 25px;
+    font-family: 'Roboto Slab',sans-serif;
+    font-weight: 400;
+    /* color: #000; */
+    margin: auto 0;
+}
+.years-p {
+    width: 300px;
+    font-size: 25px;
+    font-family: 'Roboto Slab',sans-serif;
+    font-weight: 400;
+    /* color: #000; */
+    margin: auto 0;
+}
+.compare-table-header{
+    color: #fff;
+    font-size: 25px;
+    font-family: 'Roboto Slab',sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+.div-plots{
+    background-color: rgb(215, 216, 221);
+}
+.div-plots h2 {
+    color: #000;
+    font-family: 'Lato',sans-serif;
+    font-size: 40px;
+    font-weight: 600; 
+}
+.plots{
+    width: 65%; 
+    height: auto; 
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* ------------------------------ FORGOT PASSWORD ------------------------------ */
+.forgot {
+    width: 100%;
+    overflow-y: visible;
+    background-color: rgb(209, 214, 225);
+    height: 500px;
+}
+.form-forgot {
+    width: 50%;
+}
+.btn-forgot {
+   width: 25%;
+   height: 50px; 
+   background-color: #000 !important;
+   font-family: 'Lato', sans-serif;
+   font-size: 20px;
+   border-radius: 0.375rem;
+   border: 0;
+   color: #fff;
+   transition: all 0.3s;
+}
+.btn-forgot:hover {
+    background-color: #4f525d !important;
+}
+.forgot-header {
+    font-family: 'Lato', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    position: relative;
+}
+.forgot-header::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 125px;
+    display: block;
+    background-color: var(--accent-color);
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 8px;
+
+}
+/* ----------------------------- FOOTER ------------------------------ */
+.footer {
+    color: #83858f;
+    font-size: 18px;  
+    font-weight: 400;
+    /* border-bottom: 1px solid #fff; */
+    /* background-color: #fff; */
+    overflow: hidden;
+}
+.copyright {
+    margin-left: 2px;
+}
+.footer-compare {
+    margin-top: 108px;
+    padding: 60px 0 10px 0 !important;
+}
+
+/* ------------------------------ MEDIA ------------------------------ */
+@media (min-height: 1100px) {
+    .compare {
+        height: 900px;
+    }
+    .compare-input {
+        margin-top: 180px;
+    }
+    .search-icon {
+        left: 10px;
+        top: 89%;
+    }
+    .row-button {
+        margin-top: 45% !important;
+    }
+    .row-button-toggle {
+        margin-top: 50% !important;
+    }
+    .versus {
+        margin-top: 220px;
+    }
+    .footer-compare {
+        padding: 0 !important;
+    }
+}
+@media (min-width: 1200px) {
+    .display-4 {
+        font-size: 3.0rem !important;
+    }
+    .compare-overflow{
+        overflow-y: scroll;
+    }
+}
+@media (min-width: 1360px) {
+    .display-4 {
+        font-size: 3.5rem !important;
+    }
+    .compare-overflow{
+        overflow-y: scroll;
+    }
+}
+
+@media (max-width: 1200px){
+
+    .driver-info {
+        height: 150px;
+    }
+    .flag-img {
+        height: 60px;
+        width: 110px;
+    }
+    .compare {
+        height: 780px;
+    }
+    .versus {
+        font-size: 100px;
+        font-weight: 400;
+        margin-top: 180px;
+    }
+
+    .compare-input {
+        margin-top: 150px;
+    }
+    .search-icon {
+        left: 10px;
+        top: 87%;
+    }
+    .row-button {
+        margin-top: 50% !important;
+    }
+    .row-button-toggle {
+        margin-top: 60% !important;
+    }
+    .compare-overflow {
+        overflow: scroll;
+    }
+    .driver-name-compare {
+        font-size: 30px;
+    }
+    .driver-no-number {
+        font-size: 30px !important;
+    }
+    .driver-number-compare {
+        font-size: 32px;
+    }
+}
+@media (max-width: 991.99px){
+    .main-home {
+        border-radius: 0;
+    }
+    .footer {
+        padding: 20px 0 0px 0;
+    }
+    .name-header {
+        font-size: 28px;
+        margin-left: 20px;
+    }
+    .number {
+        font-size: 38px;
+        font-weight: 400 !important;
+        margin-left: 45px;
+    }
+    .flag-img {
+        height: 60px;
+    }
+    .results {
+        padding-bottom: 16px !important;
+    }
+    .drivers{
+        margin: 0 auto;
+    }
+    .col-size {
+        width:100px;
+    }
+    .drivers-card {
+        width: 26rem !important;
+    }
+    .img-article {
+        width: 50% !important;
+    }
+    .schedule-card {
+        width: 30rem !important;
+    }
+    .compare-overflow {
+        overflow-y: scroll;
+    }
+    .compare {
+        margin-top: 60px !important;
+        height: 700px;
+    }
+    .compare-label {
+        font-size: 50px;
+    }
+    .compare-label span
+    {
+
+    }
+    .versus {
+        font-size: 80px;
+        font-weight: 400;
+        margin-top: 180px;
+    }
+
+    .compare-input {
+        font-size: 16px;
+        font-weight: 600;
+        margin-top: 150px;
+    }
+    .search-icon {
+        left: 10px;
+        top: 87%;
+    }
+    .driver-1 {
+        /* background-position-x: -180px; */
+    }
+    .driver-2 {
+        /* background-position-x: -240px; */
+    }
+    .row-button {
+        margin-top: 70% !important;
+    }
+    .row-button-toggle {
+        margin-top: 80% !important;
+    }
+    .btn-compare span {
+        font-size: 30px;
+    }
+    .footer-compare {
+        padding: 65px 0 5px 0 !important;
+    }
+
+    /* COMPARE RESULT */
+
+    .row-bg {
+        height: 80px;
+    }
+    .driver-name-compare {
+        font-size: 25px;
+    }
+    .driver-img-compare {
+        width: 50px;
+    }
+    .driver-no-number {
+        font-size: 25px !important;
+    }
+    .driver-number-compare {
+        font-size: 25px;
+    }
+    .driver-p{
+        font-size: 28px;
+    }
+    .data-headers,
+    .best-champ-headers {
+        font-size: 24px;
+    }
+    .best-champ h2,
+    .teams h2,
+    .div-plots h2
+     {
+        font-size: 30px;
+    }
+    .years-max-w {
+        max-width: 280px;
+        font-size: 22px !important;
+        padding-right: 25px;
+    }
+    .years-max-w-2{
+        /* margin-left: 50px; */
+    }
+    .best-p {
+        font-size: 26px;
+    }
+    .best-p-width-1 {
+        margin-left: 20px;
+    }
+    .team-p,
+    .years-p {
+        font-size: 20px;
+    }
+    .compare-table-header {
+        font-size: 23px;
+    }
+}
+@media (max-width: 767px){
+    .constructors-title h2,
+    .drivers-title h2{
+        font-size: 35px;
+    }
+}
+@media (max-width: 767.90px){
+    .custom-padding {
+        padding: 15px 0; 
+    }
+    .driver-info {
+        height: 200px;
+    }
+    .flag-img {
+         height: 100px;
+    }
+    .name-header,
+    .number {
+        margin-left: 20px;
+    }
+    .name-header {
+        font-size: 20px;
+    }
+    .number{
+        font-size: 25px;
+    }
+    .name-header {
+        /* font-size: 45px; */
+    }
+    .table {
+        margin-top: 20px;
+    }
+    .results {
+        padding-bottom: 16px ;
+    }
+    .con-standings-header{
+        font-size: 40px;
+        padding: 20px;
+    }
+    .img-article {
+        width: 50% !important;
+        display: block !important;
+    }
+
+    .compare-overflow {
+        overflow: scroll;
+    }
+    .compare {
+        height: 1200px;
+        /* overflow: scroll; */
+    }
+    .compare-label {
+        font-size: 50px;
+    }
+    .div-versus {
+        height: 100px;
+    }
+    .versus {
+        /* display: none; */
+    }
+
+    .compare-input {
+        font-size: 16px;
+        font-weight: 600;
+        margin-top: 100px;
+    }
+    .search-icon {
+        left: 10px;
+        top: 87%;
+    }
+    .driver-1 {
+        height: 550px;
+        /* background-position-x: 0 ; */
+    }
+    .driver-2 {
+        height: 550px;
+        /* background-position-x: 0; */
+        /* background-position-y: -100px; */
+    }
+    .row-button {
+        margin-top: 561.75px !important;
+    }
+    .row-button-toggle {
+        margin-top: 561.75px !important;
+    }
+    .btn-compare {
+        width: 70% !important;
+    }
+    .btn-compare span {
+        font-size: 30px;
+    }
+    .footer-compare {
+        padding: 65px 0 5px 0 !important;
+    }
+
+    /* COMPARE RESULT */
+    
+    .row-bg {
+        height: 85px;
+    }
+    .driver-name-compare {
+        font-size: 23px;
+    }
+    .driver-img-compare {
+        width: 35px;
+    }
+    .compare-flag {
+        width: 30px;
+        padding-left: 40px;
+    }
+    .driver-no-number {
+        font-size: 23px !important;
+    }
+    .driver-number-compare {
+        font-size: 25px;
+    }
+    .driver-p{
+        font-size: 20px;
+    }
+    .data-headers,
+    .best-champ-headers {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+    .data-headers-p {
+        max-width: 200px;
+        margin: 0 auto;
+    }
+    .best-champ h2,
+    .teams h2,
+    .div-plots h2
+     {
+        font-size: 25px;
+    }
+    .years-max-w {
+        max-width: 280px;
+        font-size: 17px !important;
+        /* padding-left: 48px; */
+        padding-right: 25px;
+        padding-top: 20px;
+    }
+    .years-max-w-2 {
+        margin-left: 50px;
+    }
+    .best-p {
+        font-size: 20px;
+    }
+    .best-p-width-1{
+        /* margin-left: 5px */
+    }
+
+    .team-p {
+        font-size: 18px;
+    }
+    .years-p {
+        font-size: 17px;
+    }
+    .compare-table-header {
+        font-size: 22px;
+    }
+
+    .form-forgot {
+        width: 75%;
+    }
+    .form-register {
+        width: 80% !important;
+    }
+    .btn-register {
+        width: 70% !important;
+    }
+    .btn-forgot {
+        width: 50%;
+    }
+}
+@media (max-width: 554px) {
+    .driver-name-compare {
+        font-size: 22px;
+    }
+    .driver-no-number {
+        font-size: 22px !important;
+    }
+    .driver-number-compare {
+        font-size: 25px;
+    }
+    .driver-p{
+        padding: 0 30px;
+    }
+    .years-max-w {
+        font-size: 15px !important;
+        /* padding-left: 48px; */
+        /* max-width: 490px; */
+    }
+    .team-p {
+        font-size: 17px;
+    }
+    .years-p {
+        font-size: 15px;
+    }
+    .add-border table {
+        height: 350px;
+    }
+}
+@media (max-width: 520px) {
+    .next-race {
+        font-size: 40px;
+        font-weight: 400;
+    }
+    .next-text {
+        font-size: 35px;
+        font-weight: 300;
+    }
+    .next-flag {
+        width: 70px;
+    }
+    .countdown-item {
+        /* border-right: solid 1px #656c7b; */
+        width: 90px !important;
+        height: 100px ;
+        overflow: hidden;
+    }
+    .countdown-number {
+        font-size: 40px;
+        font-weight: 400;
+    }
+    .countdown-text {
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 2px;    
+    }
+    .schedule-card {
+        width: 22rem !important;
+    }
+
+    .driver-name-compare {
+        font-size: 20px;
+    }
+    .driver-no-number {
+        font-size: 20px !important;
+    }
+    .driver-number-compare {
+        font-size: 22px;
+    }
+}
+@media (max-width: 495px) {
+    .display-4 {
+        font-size: 2.3rem !important;
+    }
+    .regsiter-link{
+        font-size: 1.20rem;
+    }
+    .d-standings-header{
+        font-size: 40px;
+        padding: 20px;
+    }
+    .con-standings-header {
+        font-size: 30px;
+    }
+    .drivers-card {
+        width: 18rem !important;
+    }
+    .constructors-card {
+        width: 20rem !important;
+    }
+    .constructor-name {
+        font-size: 28px;
+    }
+    .constructors-title h2,
+    .drivers-title h2 {
+        padding-top: 10px !important;
+        max-width: 300px;
+    }
+    .driver-name {
+        font-size: 20px;
+    }
+    .img-article {
+        width: 75% !important;
+    }
+    .next-text {
+        font-size: 30px;
+        font-weight: 300;
+    }
+    .countdown-item {
+        /* border-right: solid 1px #656c7b; */
+        width: 80px !important;
+        height: 100px ;
+        overflow: hidden;
+    }
+    .countdown-text {
+        letter-spacing: 1px;    
+    }
+
+    /* COMPARE */
+    .compare-overflow {
+        overflow: scroll;
+    }
+    .compare {
+        height: 1200px;
+    }
+    .compare-label {
+        font-size: 50px;
+    }
+    .div-versus {
+        height: 100px;
+    }
+    .versus {
+        /* display: none; */
+    }
+
+    .compare-input {
+        font-size: 16px;
+        font-weight: 600;
+        margin-top: 100px;
+    }
+    .search-icon {
+        left: 10px;
+        top: 84%;
+    }
+    .driver-1 {
+        height: 550px;
+    }
+    .driver-2 {
+        height: 550px;
+    }
+    .row-button {
+        margin-top: 561.75px !important;
+    }
+    .row-button-toggle {
+        margin-top: 561.75px !important;
+    }
+    .btn-compare {
+        width: 70% !important;
+    }
+    .btn-compare span {
+        font-size: 25px;
+    }
+    .footer-compare {
+        padding: 65px 0 5px 0 !important;
+    }
+
+    .driver-name-compare {
+        font-size: 15px;
+    }
+    .driver-no-number {
+        font-size: 15px !important;
+    }
+    .driver-number-compare {
+        font-size: 18px;
+    }
+    .driver-p{
+        padding: 0 30px;
+    }
+    .years-max-w {
+        font-size: 15px !important;
+        /* max-width: 490px; */
+    }
+    .team-p {
+        font-size: 15px;
+    }
+    .years-p {
+        font-size: 12px;
+    }
+    .add-border table {
+        height: 320px;
+    }
+
+    .best-p-width {
+        max-width: 100px;
+        font-size: 18px;
+        /* margin-left: 60px; */
+        /* margin: 0 auto; */
+    }
+    .forgot {
+        height: 700px;
+    }
+    .form-forgot {
+        width: 90%;
+    }
+    .btn-forgot {
+        width: 70%;
+    }
+}
+
+@media(min-width: 600px){
+    .name-header {
+        font-size: 38px;
+    }
+    .number {
+        font-size: 40px;
+        font-weight: 400 !important;
+    }
+}
+
+@media (max-width: 416px){
+    .display-4 {
+        font-size: 2.0rem !important;
+    }
+    .main-home {
+        border-radius: 0;
+    }
+    .footer {
+        padding: 20px 0 0px 0;
+    }
+    .name-header {
+        max-width: 120px;
+        font-size: 25px;
+        font-weight: 400;
+    }
+    .flag-img {
+        height: 80px;
+        width: 100px;
+    }
+    .results {
+        /* margin-top: 60px !important; */
+    }
+    .homepage {
+        height: fit-content;
+    }
+    .d-standings-header{
+        font-size: 30px;
+        padding: 20px;
+    }
+    .con-standings-header {
+        font-size: 25px;
+        padding: 25px;
+    }
+    .table-standings{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .round-text{
+        margin-left: 20px;
+    }
+    .race-name {
+        font-size: 18px;
+    }
+    .schedule-card {
+        width: 300px !important;
+    }
+    .constructors-card {
+        width: 15.5rem !important;
+    }
+    .constructor-name {
+        font-size: 24px;
+    }
+    .constructors-title h2{
+        padding-top: 10px !important;
+    }
+    .next-text {
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .countdown-item {
+        /* border-right: solid 1px #656c7b; */
+        width: 60px !important;
+        height: 90px ;
+        overflow: hidden;
+    }
+    .countdown-text {
+        font-size: 10px;
+        letter-spacing: 1px;    
+    }
+    .results {
+        overflow-x: scroll;
+    }
+}
+@media (max-width: 398px) {
+    .display-4 {
+        font-size: 1.8rem !important;
+    }
+    .c-card {
+        width: 18rem !important;
+    }
+    .driver-team-header {
+        font-size: 35px;
+        height: 80px;
+        letter-spacing: 2.5px;
+    }
+    .btn-compare span {
+        font-size: 20px;
+    }
+    .search-icon {
+        left: 10px;
+        top: 84%;
+    }
+    .driver-img-compare {
+        width: 30px;
+    }
+    .driver-name-compare {
+        font-size: 13px;
+    }
+    .driver-no-number {
+        font-size: 13px !important;
+    }
+    .driver-number-compare {
+        font-size: 15px;
+    }
+    .driver-p{
+        font-size: 14px;
+        padding: 0 30px;
+    }
+    .data-headers,
+    .best-champ-headers {
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+    .data-headers-p {
+        max-width: 100px;
+    }
+    .data-headers-debut {
+        max-width: 80px;
+    }
+    .years-max-w {
+        font-size: 15px !important;
+        /* max-width: 490px; */
+    }
+    .compare-flag {
+        border-radius: 2px;
+        width: 20px;
+    }
+    .compare-table-header {
+        font-size: 18px;
+    }
+    .team-p {
+        font-size: 15px;
+    }
+}
+@media (max-width: 328px) {
+    .display-4 {
+        font-size: 2.0rem !important;
+    }
+    .drivers-card {
+        width: 17rem !important;
+    }
+    .constructors-card {
+        width: 15.5rem !important;
+    }
+    .name-header {
+        font-size: 20px;
+    }
+    .number{
+        font-size: 25px;
+    }
+    .driver-name {
+        font-size: 20px;
+    }
+    .driver-number {
+        font-size: 25px;
+    }
+    .constructor-name {
+        font-size: 24px;
+    }
+    .next-text {
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .countdown-item {
+        /* border-right: solid 1px #656c7b; */
+        width: 50px !important;
+        height: 90px ;
+        overflow: hidden;
+    }
+    .countdown-text {
+        font-size: 9px;
+        font-weight: 800;
+        letter-spacing: 0.9px;    
+    }
+    .next-flag {
+        width: 60px;
+    }
+    .schedule-card {
+        width: 17.5rem !important;
+    }
+    .c-card {
+        width: 16rem !important;
+    }
+    .team-header{
+        font-size: 35px;
+    }
+    .btn-compare span {
+        font-size: 18px;
+    }
+    .search-icon {
+        left: 10px;
+        top: 84%;
+    }
+    .compare-label span{
+        font-size: 80px;
+    }
+
+    .driver-img-compare {
+        width: 25px;
+    }
+    .driver-name-compare {
+        font-size: 10px;
+    }
+    .driver-no-number {
+        font-size: 10px !important;
+    }
+    .driver-number-compare {
+        font-size: 12px;
+    }
+    .driver-p{
+        font-size: 12px;
+        padding: 0 30px;
+    }
+    .data-headers
+    {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+    .best-champ-headers {
+        font-size: 15px;
+    }
+    .best-p {
+        font-size: 16px;
+        /* margin-right: 40px;
+        padding-left: 40px; */
+    }
+    .data-headers-p {
+        max-width: 100px;
+    }
+    .data-headers-debut,
+    .data-headers-pole {
+        max-width: 80px;
+    }
+    .years-max-w {
+        font-size: 15px !important;
+        /* max-width: 490px; */
+    }
+    .compare-flag {
+        width: 16px;
+    }
+    .compare-table-header {
+        font-size: 15px;
+    }
+    .team-p {
+        font-size: 12px;
+    }
+    .search-p {
+        font-size: 16px;
+    }
+    .form-register {
+        width: 75% !important;
+    }
+    .btn-register {
+        width: 60% !important;
+    }
+    .p-login {
+        font-size: 1.20rem !important;
+    }
+    .success,
+    .danger {
+        font-size: 16px !important;
+    }
+    
+}

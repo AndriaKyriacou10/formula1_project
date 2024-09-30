@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Speed Icons - Compare Drivers
+{% endblock %}
+
+{%block set_overflow%}
+    compare-overflow
+{% endblock %}
+
+{% block main%}
+<section class="main-home compare container mt-4 p-0 mx-auto">
+
+    <div class="container-compare w-100 h-100 position-relative">
+        <div class=" position-absolute container w-100 h-100 px-0">
+            <form class="h-100 bg-black position-relative" action="/compare/results" method="post">
+                <div class="row h-100 w-100 mx-0 justify-content-center position-absolute">
+                    <div class="col-md-5 d-flex flex-column align-items-center  driver-1 px-4">
+                        <label for="d1" class="compare-label text-uppercase text-center"> Driver <span>1</span></label>
+                        <div class="w-100 position-relative">
+                            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                            <input type="text" id="d1" name="driver1" autocomplete="off" class="compare-input border-0 rounded" >
+                        </div>
+                        <div id="dropdown-1" class="w-100 dropdown-compare rounded">
+                            <ul id="dropdown-list-1" class="list-group">
+                            </ul>
+                        </div>
+                   </div>
+                   <div class="col-md-2 d-flex flex-column align-items-center  div-versus">
+                        <h1 class="text-center text-capitalize versus mb-0 pt-4 ">vs</h2>
+                   </div>
+                   <div class="col-md-5 d-flex flex-column align-items-center driver-2 px-4">
+                        <label for="d2" class="compare-label text-uppercase"> Driver <span>2</span></label>
+                        <div class="w-100 position-relative">
+                            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                            <input type="text" id="d2" name="driver2" autocomplete="off" class="compare-input border-0 rounded" >
+                        </div>
+                        <div id="dropdown-2" class="w-100 dropdown-compare rounded">
+                            <ul id="dropdown-list-2" class="list-group">
+                            </ul>
+                        </div>
+                   </div> 
+                   
+                </div> 
+                <div class="row w-100 mx-0 mb-4 position-absolute  row-button d-flex" id="row-btn">
+                    <button type="submit" class="btn  btn-compare d-block mx-auto"> <span>Compare Drivers</span> </button>
+                </div>
+            </form>    
+        </div>    
+    </div>        
+</section>
+<script src="{{url_for('static', filename='compare.js')}}"  type="text/javascript"></script>
+{% endblock %}
+
+{% block footer_class %}
+    footer-compare
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Speed Icons - Race Schedule
+{% endblock %}
+
+{% block main %}
+<section class="main-home schedule container my-5 p-0 mx-auto">
+    {% if next_race != false%}
+    <div id="next" class="row w-100 mx-0 countdown py-4" date = {{next_race.date}}>
+        <div class="col ps-5">
+            <h3 class="text-capitalize next-race">Next race</h3>
+            <div class="d-flex align-items-center">
+                <h3 class="next-text pe-3">{{next_race.race}}</h3>
+                <img src="{{next_race.flag}}" alt="Image of Flag" class="next-flag">
+            </div>
+
+        </div>
+        <div class="col-xl">
+            <div class="row w-100 mx-0 mt-xxl-1 mt-3 countdown-timer justify-content-center">
+                <div class="col-2 px-0 d-flex flex-column align-items-center countdown-item mx-2">
+                    <h3 id="days" class="w-100 mb-0 countdown-number py-2 text-center"></h3>
+                    <h3 class="countdown-text text-uppercase w-100 mb-0 h-100 text-center py-1">Days</h3>
+                </div>
+                <div class="col-2 px-0 d-flex flex-column align-items-center countdown-item mx-2">
+                    <h3 id="hours" class="w-100 mb-0 countdown-number py-2 text-center"></h3>
+                    <h3 class="countdown-text text-uppercase w-100 mb-0 h-100 text-center py-1">Hours</h3>
+                </div>
+                <div class="col-2 px-0 d-flex flex-column align-items-center countdown-item mx-2">
+                    <h3 id="minutes" class="w-100 mb-0 countdown-number py-2 text-center"></h3>
+                    <h3 class="countdown-text text-uppercase w-100 mb-0 h-100 text-center py-1">Minutes</h3>
+                </div>
+                <div class="col-2 px-0 d-flex flex-column align-items-center countdown-item mx-2 ">
+                    <h3 id="seconds" class="w-100 mb-0 countdown-number py-2 text-center"></h3>
+                    <h3 class="countdown-text text-uppercase w-100 mb-0 h-100 text-center py-1">Seconds</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    <div class="row w-100 mx-0 pb-4 justify-content-center">
+        {% for race in schedule %}
+            <div class="col schedule-col">
+                <div class="card schedule-card mx-auto my-4" style="width: 22rem;">
+                    <div class="card-body">
+                        <h4 class="round-race">Round <span class="round-number">{{race.round}}</span> <span class="date-text ms-2">{{race.date}}</span> </h4>
+                        <div class="circuit-flag d-flex justify-content-between">
+                            <h5 class="card-title race-name d-block">{{race.race}}</h5>
+                            <img src="{{race.flag}}" alt="" class="flag">
+                        </div>
+                        <p class="card-text">{{race.city}}, {{race.country}}</p>
+                    </div>
+
+                    <img src="{{race.track_img}}" class="card-img-bottom track-img w-75 d-block mx-auto pb-4" alt="...">
+                    <div class="card-body">      
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <script src="{{ url_for('static', filename='countdown.js') }}"  type="text/javascript"></script>
+</section>
+{% endblock %}

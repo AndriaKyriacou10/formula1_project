@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Speed Icons - Constructor Standings
+{% endblock %}
+
+{% block main %}
+    <section class="main-home con-standings container my-5 p-0 mx-auto">
+        <div class="row w-100 mx-0">
+            <div class="col con-standings-container px-0">
+                <h3 class="con-standings-header h-100 mb-0 text-center">Constructor Standings</h3>
+            </div>   
+        </div>
+        <div class="row w-100 mx-0">
+            
+            <div class="col px-sm-4 py-5  table-responsive table-standings">
+                <p class="round-text">After Round <span class="fw-bold fs-3">{{round}}</span> : </p>
+                <table class="table table-light table-bordered table-hover mb-0 mt-3 ">
+                    <thead class="fs-5 align-middle">
+                        <tr>
+                            <th> # </th>
+                            <th>Constructor</th>
+                            <th>Position</th>
+                            <th>Points</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-group-divider fs-5 text-capitalize">
+                        {% for standing in standings%}
+                            <tr>
+                                <td>{{loop.index}}</td>
+                                <td><a href="/team/{{standing.id}}" class="link-dark link-underline link-underline-opacity-0">{{standing.name}}</a></td>
+                                <td>{{standing.position}}</td>
+                                <td>{{standing.points}}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+{% endblock %}
