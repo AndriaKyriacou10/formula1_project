@@ -69,7 +69,11 @@ The JavaScript files contribute to the additional functionality that some of the
 ### register.js
 Depending on whether the favourite driver select tag is chosen, the margin of the select tag is adjusted through the js code in order to make all the select options i.e. the drivers, visible in the viewport
 
-https://github.com/user-attachments/assets/8b20bfd8-4b12-468e-8d5a-ace839ea9a66
+
+
+https://github.com/user-attachments/assets/a2cc9d98-d3ed-442c-bcda-049a17fda555
+
+
 
 ### driver.js & constructor.js
 Handles the redirection to the pages for searched drivers or constructors.
