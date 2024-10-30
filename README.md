@@ -77,17 +77,25 @@ Handles the redirection to the pages for searched drivers or constructors.
 ### countdown.js
 Powers the countdown feature in the **/calendar** route
 
-https://github.com/user-attachments/assets/c943fd84-67c5-46ae-afde-72e3012c4918
+
+https://github.com/user-attachments/assets/c38ed505-b790-4204-bd32-9174f5f7e5e0
+
 
 ### comapre.js
 Adds the functionality of filtering out potential matches to the search query of the user. This is accomplished by sending a GET request to the /compare/search route in which drivers that match the query are selected from the database and returned as a response to the GET request of the js file.
 
-https://github.com/user-attachments/assets/0864eace-565b-4363-95ce-b8f3b35af163
+
+
+https://github.com/user-attachments/assets/2bd4bc27-8588-416f-8a37-d6d43977abe1
 
 ### compare_result.js
 Handles dynamic styling and displays driver comparison graphs such as drivers points throughout the seasons, win ratio and podium ratio using **plotly.js** .
 
-https://github.com/user-attachments/assets/15dc3dce-1777-40f9-9559-de9fbb65bf6f
+
+
+https://github.com/user-attachments/assets/1dbc8a41-0afa-44ea-b021-486e0d15668a
+
+
 
 ## How to view the web application
 #### 1) Visit this URL: [speedicons.pythonanywhere.com](https://speedicons.pythonanywhere.com/)
