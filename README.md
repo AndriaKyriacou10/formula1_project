@@ -1,5 +1,4 @@
 # SpeedIcons - Formula 1 Project
-### VIDEO DEMO: [Speed Icons - CS50 Final Project](https://youtu.be/Rff9AGjM31A)
 ### URL: [speedicons.pythonanywhere.com](https://speedicons.pythonanywhere.com/)
 ## Overview
 As a final project for the **CS50x course**, I chose to implement a **Formula 1**  inspired web application by utilising the programming languages of Python, HTML, JavaScript, Jinja, and SQL. The application is built with the Flask framework and uses SQLAlchemy for database operations. \
